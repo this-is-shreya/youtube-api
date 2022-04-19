@@ -17,6 +17,7 @@
       <button  class="btn btn-success" onclick="search_video()">Submit</button>
       <button  class="btn btn-default" onclick="show_home()">Reset</button>
     <div id="home">
+        <!-- Here, we are displaying the videos as sent from the get("/") route in server.js -->
         <% videos.forEach(vid=>{ %>
             <iframe src="https://youtube.com/embed/<%= vid.videoId %>"
                 height="315" width="420" frameborder="0"></iframe>
@@ -24,6 +25,6 @@
     </div>
 <div class="col-md-12" id="search_results">
 </div>
-    <script src="js/script.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 </html>
