@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube API Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="form-group">
+        <label for="usr">Search:</label>
+        <input type="text" class="form-control" name="search_query">
+    </div>
+      <button  class="btn btn-success" onclick="search_video()">Submit</button>
+      <button  class="btn btn-default" onclick="show_home()">Reset</button>
+    <div id="home">
+        <% videos.forEach(vid=>{ %>
+            <iframe src="https://youtube.com/embed/<%= vid.videoId %>"
+                height="315" width="420" frameborder="0"></iframe>
+        <%})%>
+    </div>
+<div class="col-md-12" id="search_results">
+</div>
+    <script src="js/script.js"></script>
+</body>
+</html>
